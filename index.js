@@ -12,6 +12,4 @@ app.use(cors());
 app.use("/", routeIndex);
 app.use("/blogs", routeBlogs);
 
-app.listen(port, () => {
-  console.log(`Server is running in port ${port}`);
-});
+app.listen(process.env.PORT || port);
