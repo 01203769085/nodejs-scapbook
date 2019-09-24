@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/blog/:id", async (req, res) => {
-  let { id } = req.param;
+  let { id } = req.params;  
   let response = await modelBlogs.getBlogById(id);
   res.send(response);
 });

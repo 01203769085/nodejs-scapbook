@@ -59,12 +59,12 @@ async function getAllBlogs() {
   let data = await Blogs.findAll().catch(e => e);
   return data;
 }
-async function getBlogById(id) {
+async function getBlogById(id) {  
   let data = await Blogs.findAll({
     where: {
       id
     }
-  }).catch(e => e);
+  }).catch(e => e);  
   return data;
 }
 
