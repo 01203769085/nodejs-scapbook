@@ -6,7 +6,6 @@ const cors = require("cors");
 //routes
 const routeIndex = require("./routes/routeIndex");
 const routeBlogs = require("./routes/routeBlogs");
-const modelBlog = require("./model/modelBlogs");
 
 //config
 app.use(cors());
