@@ -9,8 +9,7 @@ const options = {
 };
 
 router.get("/", async (req, res) => {
-  let response = await modelBlogs.getAllBlogs();
-  let random = await modelBlogs.getRandomBlogs();
+  let response = await modelBlogs.getAllBlogs();  
   res.send(response);    
 });
 
