@@ -59,6 +59,15 @@ async function getAllBlogs() {
   let data = await Blogs.findAll().catch(e => e);
   return data;
 }
+async function getRandomBlogs(countblogs){
+ let  limit = parseInt(countblogs.limit); 
+  let data = await Blogs.findAll({
+    order: Sequelize.literal('rand()'),   
+    limit 
+  }).catch(e=>e);
+  console.log(data);
+  return data;
+}
 async function getBlogById(id) {  
   let data = await Blogs.findAll({
     where: {
@@ -80,5 +89,6 @@ module.exports = {
   createBlog,
   getAllBlogs,
   getBlogById,
-  getBlogsByPage
+  getBlogsByPage,
+  getRandomBlogs
 };

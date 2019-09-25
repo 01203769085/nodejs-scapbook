@@ -10,12 +10,19 @@ const options = {
 
 router.get("/", async (req, res) => {
   let response = await modelBlogs.getAllBlogs();
-  res.send(response);
+  let random = await modelBlogs.getRandomBlogs();
+  res.send(response);    
 });
 
 router.get("/blog/:id", async (req, res) => {
   let { id } = req.params;  
   let response = await modelBlogs.getBlogById(id);
+  res.send(response);
+});
+
+router.get("/randomblog/:limit", async (req,res)=>{
+  let limit = req.params;
+  let response = await modelBlogs.getRandomBlogs(limit);
   res.send(response);
 });
 
