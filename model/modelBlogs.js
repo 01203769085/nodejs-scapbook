@@ -80,13 +80,7 @@ async function getBlogById(id) {
 async function getBlogsByPage(page, limit) {
   let data = await Blogs.findAll({
     offset: page,
-    limit
-  }).catch(e => e);
-  return data;
-}
-
-async function getAllBlogsReverse(){
-  let data = await Blogs.findAll({
+    limit,
     order:[['id','DESC']]
   }).catch(e => e);
   return data;
@@ -97,6 +91,5 @@ module.exports = {
   getAllBlogs,
   getBlogById,
   getBlogsByPage,
-  getRandomBlogs,
-  getAllBlogsReverse
+  getRandomBlogs,  
 };

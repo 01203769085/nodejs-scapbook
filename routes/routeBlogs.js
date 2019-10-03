@@ -33,10 +33,6 @@ router.get("/blogsbypage", async (req, res) => {
   res.send(response);
 });
 
-router.get("/blogsreverse",async(req,res)=>{
-  let response = await modelBlogs.getAllBlogsReverse();
-  res.send(response);
-})
 
 // router.post("/", async (req, res) => {
 //   let defaultImgPath =
