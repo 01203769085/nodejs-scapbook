@@ -33,6 +33,11 @@ router.get("/blogsbypage", async (req, res) => {
   res.send(response);
 });
 
+router.get("/blogsreverse",async(req,res)=>{
+  let response = await modelBlogs.getAllBlogsReverse();
+  res.send(response);
+})
+
 // router.post("/", async (req, res) => {
 //   let defaultImgPath =
 //     "https://res.cloudinary.com/dotthan123/image/upload/v1568818993/sample.jpg";
