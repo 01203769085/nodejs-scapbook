@@ -1,4 +1,5 @@
 const express = require("express");
+const fileupload = require("express-fileupload");
 const app = express();
 const port = 3000;
 const cors = require("cors");
@@ -10,6 +11,7 @@ const routeUpload = require('./routes/routeUpload');
 
 //config
 app.use(cors());
+app.use(fileupload());
 app.use("/", routeIndex);
 app.use("/blogs", routeBlogs);
 app.use("/upload",routeUpload);
