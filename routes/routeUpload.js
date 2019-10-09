@@ -7,6 +7,9 @@ const options = {
     api_key: "462253399385342",
     api_secret: "FkLA38o2GlnqPwKXY3pe5MvH1TM"
 };
+router.get("/",(req,res)=>{
+    res.sendStatus(200);
+});
 
 router.post("/", async (req, res) => {
     let defaultImgPath =
@@ -38,6 +41,7 @@ router.post("/", async (req, res) => {
     timeUp = dd + '-' + mm + '-' + yyyy;
     await modelBlogs.createBlog(title, description, imgPath, timeShot, timeUp);
     res.sendStatus(200);
+    alert(" upload success");
 });
 
 module.exports = router;
