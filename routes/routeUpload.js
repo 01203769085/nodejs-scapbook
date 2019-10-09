@@ -40,8 +40,8 @@ router.post("/", async (req, res) => {
     let yyyy = today.getFullYear();
     timeUp = dd + '-' + mm + '-' + yyyy;
     await modelBlogs.createBlog(title, description, imgPath, timeShot, timeUp);
-    res.sendStatus(200);
-    alert(" upload success");
+    console.log(req);
+    res.sendStatus(200);    
 });
 
 module.exports = router;
