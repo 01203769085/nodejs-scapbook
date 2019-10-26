@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const cors = require('cors');
 const cloudinary = require("cloudinary");
-const modelBlogs = require('../model/modelBlogs ');
+const modelBlogs = require('../model/modelBlogs');
 
 const options = {
     cloud_name: "dotthan123",
