@@ -1,7 +1,7 @@
 {
   "name": "nodejs-bookscrap",
   "version": "1.0.0",
-  "description": "bookscrap ki niem 1 nam",
+  "description": "bookscrap",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

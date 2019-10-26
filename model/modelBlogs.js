@@ -17,7 +17,7 @@ sequelize
     console.log(`Connected database !!!`);
   })
   .catch(e => {
-    console.log(`Fail to connect database !!!`);
+    console.log(e);
   });
 
 const Blogs = sequelize.define("blog", {
