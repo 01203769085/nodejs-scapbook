@@ -20,7 +20,7 @@ sequelize
     console.log(e);
   });
 
-const Blogs = sequelize.define("blog", {
+const Blogs = sequelize.define("blogs", {
   title: {
     type: Sequelize.STRING,
     allowNull: false
@@ -40,18 +40,23 @@ const Blogs = sequelize.define("blog", {
   timeUp: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  type:{
+    type:Sequelize.STRING,
+    allowNull: false
   }
 });
 
-//Blogs.sync({ force: true });
+// Blogs.sync({ force: true });
 
-async function createBlog(title, description, url, timeShot, timeUp) {
+async function createBlog(title, description, url, timeShot, timeUp,type) {
   await Blogs.create({
     title,
     description,
     url,
     timeShot,
-    timeUp
+    timeUp,
+    type
   });
 }
 

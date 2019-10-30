@@ -3,7 +3,7 @@ const router = express.Router();
 const modelBlogs = require("../model/modelBlogs");
 
 router.get("/", async (req, res) => {
-  let response = await modelBlogs.getAllBlogs();  
+  let response = await modelBlogs.getAllBlogs();    
   res.send(response);    
 });
 
